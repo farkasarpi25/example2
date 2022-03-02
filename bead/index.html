@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Varázslatos katakomba</title>
+</head>
+<body>
+<div id="homeButtons">
+    <button id="home">Kezdő oldal</button>
+    <button id="desc">Játék leírása</button>
+    <button id="start">Játék elkezdésse</button>
+</div>
+<div id="body">
+        <div id="kezdo">
+        <h1 id="1stcim">Varázslatos katakomba</h1>
+        <div id="pic"><img src="maze.png" alt=""></div>
+
+        <div id="playerSlider">
+            <div>
+                <input type="range" id="players" min="1" max="4">
+                <input type="number" min="1" max="4" disabled="true" id="playersShow" value="2">
+            </div>
+            <p class="texts">Játékosok száma</p>
+            <div>
+                <input type="range" id="prizes" min="2" max="6">
+                <input type="number" min="2" max="6" disabled="true" id="prizesShow" value="2">
+            </div>
+            <p class="texts">Kincsek száma</p>
+        </div>
+
+        </div>
+
+    <div id="leiras">
+        <h1>Játék leírása</h1>
+        <pre>              A katakomba szobáit egy 7x7-es négyzetrács cellái jelképezik. Minden szobában adott,
+            hogy hány falán van ajtó. Ha két szomszédos szoba érintkező falán egy-egy ajtó van,
+            akkor át lehet menni egyik szobából a másikba. A négyzetrács páros sorait és oszlopait el
+            lehet tolni, a többi szoba végig rögzített a játék során. Az eltolásokkal az ajtókon keresztül
+            utak nyílnak a szobák között, így lehet eljutni a kincsekhez. Mindegyik kérő arra törekszik, hogy a
+            katakomba szobáinak ötletes eltolásával eljusson a kincsekhez. Aki elsőként találja meg mindahányat és
+            kiindulópontjára sikeresen visszaérkezik az a nyertes. <br>
+              A játék során minden játékosnak a kincsek közül azt kell megszereznie, ami ugyan olyan színű,
+            mint a játékos figurája. Arra a mezőre kell eljutni. Ahhoz, hogy a célt elérje, a játékosnak: <br>
+
+                1. először a katakombát kell átalakítania a kimaradt szoba becsúsztatásával, és<br>
+                2. lépnie mindig csak ez után szabad a figurájával.<br>
+
+              A katakomba átalakítása a következőképpen történik: A játékos a kimaradt szobát
+            (tetszőlegesen elforgatva) valamelyik oldalról becsúsztathatja a játéktábla területére egy
+            szabadon mozgó sor vagy oszlop szélén, aminek következtében az átellenes oldalon kiesik egy másik szoba.
+            A tábla szélén nyilak jelzik azokat a helyeket, ahol a szobát be lehet csúsztatni.
+            A szoba bárhol betolható, kivétel ott, ahol az imént kilökődött. Nem szabad tehát az előző játékos lépését
+            rögtön „visszacsinálni". Ha a szobák eltolása során a szobával
+            együtt egy figura is kitolódnék – akár másé, akár a miénk -,
+            akkor ezt a figurát az ellenkező oldalról imént becsúsztatott szobába kell helyezni.
+
+              A szobák eltolását követi a játékos lépése a figurával. Nem kötelező lépni. Figuránkat akár
+            ott is hagyhatjuk, ahol éppen van. Egy mezőn több figura is állhat:
+            a figurák nem ütik ki egymást. Célszerű oda lépni, ahol jó helyzetben lesz a
+            következő kincskártya eléréséhez.
+
+              A játék akkor ér véget, ha egy játékos az összes kincset megszerezte, és
+            visszavezette a figuráját arra mezőre, ahonnan elindult. Az a győztes, aki valamennyi kincsét
+            megtalálta és figuráját elsőként juttatta vissza a kiindulópontra.</pre>
+    </div>
+<div id="jatek">
+    <div id="leftside">
+        <div id="top">
+            <table id="toptable">
+                <tr>
+                    <td class="toptiles">
+                        <img src="blank.png">
+                    </td>
+                    <td class="toptiles">
+                        <img src="blank.png">
+                    </td>
+                    <td class="toptiles" id="slideDown1">
+                        <img src="arrowdown.png">
+                    </td>
+                    <td class="toptiles">
+                        <img src="blank.png">
+                    </td>
+                    <td class="toptiles" id="slideDown2">
+                        <img src="arrowdown.png">
+                    </td>
+                    <td class="toptiles">
+                        <img src="blank.png">
+                    </td>
+                    <td class="toptiles" id="slideDown3">
+                        <img src="arrowdown.png">
+                    </td>
+                    <td class="toptiles">
+                        <img src="blank.png">
+                    </td>
+                    <td class="toptiles" id="exit">
+                        <img src="exit.png">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="middle">
+                <div id="left">
+                    <table id="lefttable">
+                        <tr>
+                            <td class="lefttiles">
+                                <img src="blank.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="lefttiles" id="slideRight1">
+                                <img src="arrowright.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="lefttiles">
+                                <img src="blank.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="lefttiles" id="slideRight2">
+                                <img src="arrowright.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="lefttiles">
+                                <img src="blank.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="lefttiles" id="slideRight3">
+                                <img src="arrowright.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="lefttiles">
+                                <img src="blank.png">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <table id="board">
+                </table>
+
+                <div id="right">
+                    <table id="righttable">
+                        <tr>
+                            <td class="righttiles">
+                                <img src="blank.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="righttiles" id="slideLeft1">
+                                <img src="arrowleft.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="righttiles">
+                                <img src="blank.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="righttiles"  id="slideLeft2">
+                                <img src="arrowleft.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="righttiles">
+                                <img src="blank.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="righttiles" id="slideLeft3">
+                                <img src="arrowleft.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="righttiles">
+                                <img src="blank.png">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+
+        <div id="bottom">
+            <table id="bottomtable">
+                <tr>
+                    <td class="bottomtiles">
+                        <img src="blank.png">
+                    </td>
+                    <td class="bottomtiles">
+                        <img src="blank.png">
+                    </td>
+                    <td class="bottomtiles" id="slideUp1">
+                        <img src="arrowup.png">
+                    </td>
+                    <td class="bottomtiles">
+                        <img src="blank.png">
+                    </td>
+                    <td class="bottomtiles"  id="slideUp2">
+                        <img src="arrowup.png">
+                    </td>
+                    <td class="bottomtiles">
+                        <img src="blank.png">
+                    </td>
+                    <td class="bottomtiles"  id="slideUp3">
+                        <img src="arrowup.png">
+                    </td>
+                    <td class="bottomtiles">
+                        <img src="blank.png">
+                    </td>
+                    <td class="bottomtiles">
+                        <img src="blank.png">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="rightside">
+        <table id="playerTable">
+                <tr>
+                    <td id="player1">
+                        <img src="bluePlayer.png">
+                        <p id="player1Score">0/6</p>
+                    </td>
+                    <td id="player2">
+                        <img src="greenPlayer.png">
+                        <p id="player2Score">0/6</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="player3">
+                        <img src="redPlayer.png">
+                        <p id="player3Score">0/6</p>
+                    </td>
+                    <td id="player4">
+                        <img src="purplePlayer.png">
+                        <p id="player4Score">0/6</p>
+                    </td>
+                </tr>
+        </table>
+
+        <table id="slideIn">
+            <tr>
+                <td id="rotateLeft">
+                    <img src="arrowleft.png">
+                </td>
+                <td id="outTile">
+                    <div>
+                        <img src="straight0.png">
+                    </div>
+                </td>
+                <td id="rotateRight">
+                    <img src="arrowright.png">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
